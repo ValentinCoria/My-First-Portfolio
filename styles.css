@@ -1,4 +1,3 @@
-/* General reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,61 +5,133 @@
 }
 
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0a192f;
+  color: #ccd6f6;
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
-/* Header panel on the left */
-header {
-  width: 25%;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto; /* Allows scrolling if content exceeds the height */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
 }
 
-header h1, header h2, header p {
-  margin-bottom: 10px;
+.sidebar {
+  position: fixed ; /* Fijar la barra lateral */
+  top: 0;
+  left: 5%;
+  width: 30%; /* Ajusta el ancho que desees */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  padding: 40px;
+  background-color: #112240;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-header nav ul {
+.sidebar h1 {
+  font-size: 2.5rem;
+  color: #64ffda;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #8892b0;
+}
+
+.sidebar nav ul {
   list-style: none;
-  padding: 0;
+  margin-top: 40px;
 }
 
-header nav ul li {
-  margin: 15px 0;
+.sidebar nav ul li {
+  margin-bottom: 15px;
 }
 
-header nav ul li a {
-  color: white;
+.sidebar nav ul li a {
+  color: #ccd6f6;
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
+.sidebar nav ul li a:hover {
+  color: #64ffda;
 }
 
-/* Main content on the right */
-main {
-  margin-left: 25%; /* This prevents content from overlapping with the header */
-  width: 75%; /* Rest of the screen width */
-  padding: 20px;
-  background-color: #f4f4f4; /* Optional background for distinction */
+.social-media {
+  margin-top: 50px;
 }
 
-/* Sections */
-section {
+.social-media a {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.social-media img {
+  width: 24px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+  opacity: 1;
+}
+
+.content {
+  width: 70%;
+  margin-left: 30%;
+  padding: 40px;
+  background-color: #0a192f;
+}
+
+.content section {
   margin-bottom: 40px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f1f1f1;
-  margin-top: 40px;
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #64ffda;
 }
+
+.content p {
+  font-size: 1rem;
+  color: #8892b0;
+  line-height: 1.6;
+}
+
+#contact {
+  height: auto;
+  display: inline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input, textarea, button {
+  margin-bottom: 10px;
+}
+
+input {
+  height: 28px;
+}
+textarea {
+  height: 100px;
+}
+
+button {
+  height: 35px;
+}
+
+

@@ -4,68 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Primer PORTFOLIO</title>
+    <title>Valentin Coria</title>
 </head>
 <body>
-    <header>
-        <div>
+    <div class="container">
+        <aside class="sidebar">
             <h1>Valentin Coria</h1>
             <h2>Software Engineering Student</h2>
             <p>Imagine, Code, and Make it Real</p>
             <nav>
                 <ul>
-                    <li><a href="#about">About me </a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact me</a></li>
                 </ul>
-
-                <div class="social-media">
-                    <a href="https://instagram.com/yourusername" target="_blank">
-                        <img src="images/icons/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="https://github.com/yourusername" target="_blank">
-                        <img src="images/icons/github.png" alt="GitHub">
-                    </a>
-                    <!-- Agrega más íconos aquí -->
-                </div>
             </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-        </section>
-
-        <section id="aboutme">
-            <h2>About me</h2>
-            <p>bla bla bla </p>
-        </section>
-
-        <section id="projects">
-            <h2>My projects</h2>
-            <div>
-                <h3>project 1</h3>
-                <p>Here is the description</p>
+            <div class="social-media">
+                <a href="https://github.com/yourusername" target="_blank">
+                    <img src="images/icons/github.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank">
+                    <img src="images/icons/instagram.png" alt="Instagram">
+                </a>
             </div>
-        </section>
+        </aside>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="/" class="form">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-            </form>
-        </section>
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, ratione. Impedit, assumenda ab dolorum aut, consequatur repudiandae asperiores hic non maiores et libero. Velit facilis praesentium ut laboriosam quas sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nostrum asperiores eum recusandae quam consequuntur corrupti rem laborum consectetur molestias nulla distinctio. Minus laudantium quod aspernatur repudiandae illo quos ut? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem dolore dolorum labore cumque aut, assumenda suscipit iusto corrupti maxime distinctio, delectus possimus accusamus quis nisi voluptatum necessitatibus sunt at et.</p>
+            </section>
 
-        
+            <section id="technologies">
+                <h2>Technologies</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima accusantium deleniti quasi nesciunt consequatur a, animi sunt dolor omnis quidem dolores totam suscipit quaerat rem nemo voluptatibus sequi architecto in!</p>
+            </section>
 
-    </main>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident impedit ex doloribus vel veritatis praesentium illum ad doloremque placeat! Pariatur placeat eligendi eius autem corrupti libero nihil dicta repellat maiores.</p>
+            </section>
 
-    <footer>
-        <p>&copy; 2024 Mi sitio</p>
-    </footer>
+            <section id="contact">
+                <h2>Would you like to contact ?</h2>
+                <form action="/" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name"  placeholder="Enter your name" name="name" required>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" name="email" required>
+            
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Enter your message here"  name="message" rows="4" required></textarea>
+    
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
 
+        </main>
 
+    </div>
 </body>
 </html>

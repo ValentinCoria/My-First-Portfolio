@@ -9,9 +9,12 @@
 <body>
     <div class="container">
         <aside class="sidebar">
-            <h1>Valentin Coria</h1>
-            <h2>Software Engineering Student</h2>
-            <p>Imagine, Code, and Make it Real</p>
+            <div class="intro">
+                <h1>Valentin Coria</h1>
+                <h2>Software Engineering Student</h2>
+                <p>Imagine, Code, and Make it Real</p>
+            </div>
+            
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -47,6 +50,13 @@
             <section id="projects">
                 <h2>Projects</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident impedit ex doloribus vel veritatis praesentium illum ad doloremque placeat! Pariatur placeat eligendi eius autem corrupti libero nihil dicta repellat maiores.</p>
+                <div class="project-list">
+                    <button class="project-button" data-project="1">Porject 1</button>
+                </div>
+                <div id="project-display">
+                    <img id="project-image" src="" alt="imageeeen" style="display: none;">
+                    <p id="project-description" style="display: none;">projecto bla bla bla bla gla bla bla </p>
+                </div>
             </section>
 
             <section id="contact">
@@ -68,5 +78,7 @@
         </main>
 
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

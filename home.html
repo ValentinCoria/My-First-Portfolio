@@ -50,14 +50,29 @@
             <section id="projects">
                 <h2>Projects</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident impedit ex doloribus vel veritatis praesentium illum ad doloremque placeat! Pariatur placeat eligendi eius autem corrupti libero nihil dicta repellat maiores.</p>
-                <div class="project-list">
-                    <button class="project-button" data-project="1">Porject 1</button>
+                
+                <div class="tabs">
+                    <div data-target="project1" class="tab active">Project 1</div>
+                    <div data-target="project2" class="tab">Project 2</div>
+                    <div data-target="project3" class="tab">Project 3</div>
                 </div>
+                
                 <div id="project-display">
-                    <img id="project-image" src="" alt="imageeeen" style="display: none;">
-                    <p id="project-description" style="display: none;">projecto bla bla bla bla gla bla bla </p>
+                    <div id="project1" class="project-content active">
+                        <img src="path/to/project1-image.jpg" alt="Project 1 Image">
+                        <p>Description for Project 1.</p>
+                    </div>
+                    <div id="project2" class="project-content">
+                        <img src="path/to/project2-image.jpg" alt="Project 2 Image">
+                        <p>Description for Project 2.</p>
+                    </div>
+                    <div id="project3" class="project-content">
+                        <img src="path/to/project3-image.jpg" alt="Project 3 Image">
+                        <p>Description for Project 3.</p>
+                    </div>
                 </div>
             </section>
+            
 
             <section id="contact">
                 <h2>Would you like to contact ?</h2>

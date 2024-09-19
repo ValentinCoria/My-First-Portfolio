@@ -103,6 +103,17 @@ nav ul li a:hover {
   color: #8892b0;
 }
 
+#myself {
+  width: 40%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  max-width: 400px; /* Limita el ancho máximo de la imagen */
+  border-radius: 8px; /* Redondea los bordes de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para dar un efecto de profundidad */
+  display: block; /* Asegura que la imagen se muestre como un bloque */
+  margin: 20px 0; /* Añade un margen vertical para separar la imagen del texto */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin distorsionar */
+}
+
+
 section {
   margin-bottom: 60px;
 }
@@ -230,7 +241,7 @@ button:hover {
 
 .tech {
   transition: all 0.3s ease;
-  color: #333;
+  color: #e91e63;
   cursor: pointer;
 }
 

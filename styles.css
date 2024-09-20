@@ -104,15 +104,21 @@ nav ul li a:hover {
 }
 
 #myself {
-  width: 40%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  width: 35%; /* Ajusta el ancho de la imagen */
   max-width: 400px; /* Limita el ancho máximo de la imagen */
   border-radius: 8px; /* Redondea los bordes de la imagen */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para dar un efecto de profundidad */
   display: block; /* Asegura que la imagen se muestre como un bloque */
-  margin: 20px 0; /* Añade un margen vertical para separar la imagen del texto */
+  margin: 20px auto; /* Centra la imagen horizontalmente */
   object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin distorsionar */
+  filter: grayscale(100%); /* Aplica blanco y negro */
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transición más suave */
 }
 
+#myself:hover {
+  filter: grayscale(0%); /* Vuelve a color cuando se pasa el cursor */
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
 
 section {
   margin-bottom: 60px;
@@ -234,18 +240,22 @@ button:hover {
 }
 
 .tech-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajusta el mínimo ancho de cada "celda" */
+  grid-gap: 20px;
+  justify-items: center; /* Centra las palabras dentro de sus celdas */
+  align-items: center;
+  padding: 20px;
 }
 
 .tech {
-  transition: all 0.3s ease;
-  color: #e91e63;
-  cursor: pointer;
+transition: all 0.3s ease;
+color: #e91e63; 
+cursor: pointer;
+font-size: 18px; 
 }
 
 .tech:hover {
-  color: #007bff; /* Change to the color you want on hover */
-  transform: scale(1.2); /* Enlarge the text on hover */
+color: #64ffda; 
+transform: scale(1.7); /* Agranda el texto al pasar el cursor */
 }

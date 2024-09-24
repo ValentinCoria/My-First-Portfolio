@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  position: relative; /* Asegúrate de que el body sea el contenedor de referencia */
 }
 
 .container {
@@ -298,4 +299,16 @@ font-size: 18px;
 .tech:hover {
 color: #64ffda; 
 transform: scale(1.7); /* Agranda el texto al pasar el cursor */
+}
+
+#mouse-follow {
+  position: absolute;
+  width: 100px; /* Ancho del área que sigue al mouse */
+  height: 100px; /* Alto del área que sigue al mouse */
+  border-radius: 50%; /* Hace que el área sea circular */
+  pointer-events: none; /* Evita que el puntero interactúe con este elemento */
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+  mix-blend-mode: multiply; /* Mezcla el color del fondo con el div */
+  background-color: rgba(100, 255, 218, 0.5); /* Color inicial */
 }

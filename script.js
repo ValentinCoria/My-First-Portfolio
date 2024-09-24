@@ -55,3 +55,17 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+// Obtener el elemento que sigue al mouse
+const mouseFollow = document.getElementById('mouse-follow');
+
+// Función para actualizar la posición del área que sigue al mouse
+document.addEventListener('mousemove', (e) => {
+  const mouseX = e.clientX; // Posición X del mouse
+  const mouseY = e.clientY; // Posición Y del mouse
+
+  // Actualizar la posición del div
+  mouseFollow.style.left = `${mouseX - mouseFollow.offsetWidth / 2}px`; // Centrar horizontalmente
+  mouseFollow.style.top = `${mouseY - mouseFollow.offsetHeight / 2}px`; // Centrar verticalmente
+});

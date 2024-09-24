@@ -18,3 +18,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// evento de click sobre las secciones del aside 
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+    })
+})
+
+
+//Evento de scroll
+// Obtener todas las secciones y enlaces de navegación
+const sections = document.querySelectorAll("section");
+
+// Función que verifica la sección en pantalla
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  // Iterar sobre las secciones y verificar cuál está visible
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id"); // Obtener el id de la sección visible
+    }
+  });
+
+  // Quitar la clase active de todos los enlaces y agregarla al correspondiente
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});

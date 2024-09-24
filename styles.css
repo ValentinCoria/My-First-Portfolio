@@ -13,21 +13,25 @@ body {
 
 .container {
   display: flex;
+  align-items: flex-start;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
+  justify-content: center;
+  min-height: 100vh; /* Asegura que la altura del contenedor sea del 100% del viewport */
 }
 
 /* Sidebar */
 .sidebar {
-  width: 25%;
-  background-color: #112240;
+  position: sticky;
+  width: 50%;
+  top: 50%; /* Coloca el sticky al 50% de la pantalla */
+  height: 90vh;
+  transform: translateY(-50%); /* Esto asegura que la barra se centre verticalmente */
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
-  border-radius: 8px;
 }
 
 .sidebar h1 {
@@ -46,41 +50,77 @@ body {
   margin: 20px 0;
 }
 
+.social-media {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  filter: brightness(0) invert(1);
+}
+
+.social-media img {
+  width: 25px;
+}
+
+.social-media:hover {
+  filter: brightness(0.5) invert(1);
+}
+
+/* Elimina padding/margin por defecto de ul y li */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Espaciado vertical entre los items del menú */
 nav ul li {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
+/* Estilos para los enlaces */
 nav ul li a {
   text-decoration: none;
   color: #ccd6f6;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block; /* Asegura que el enlace sea tratado como bloque */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Línea inferior al pasar el mouse (hover) */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px; /* Coloca la línea justo debajo del texto */
+  left: 0;
+  background-color: #64ffda;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al hacer hover */
 nav ul li a:hover {
   color: #64ffda;
+  transform: translateX(10px); /* Desplaza el texto a la derecha */
 }
 
-.social-media {
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
+nav ul li a:hover::after {
+  visibility: visible;
+  width: 100%; /* Muestra la línea completa */
 }
 
-.social-media img {
-  width: 30px;
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
+/* Efecto para la sección activa */
+nav ul li a.active {
+  color: #64ffda;
+  transform: translateX(10px); /* Mantén el desplazamiento cuando el enlace está activo */
+  border-bottom: 2px solid #64ffda;
 }
 
-.social-media img:hover {
-  filter: brightness(0.5) invert(1);
+/* Asegurarse que el translateX no sea interferido por otros estilos */
+nav ul li a {
+  transform: translateX(0); /* Asegura que siempre inicie desde la posición inicial */
 }
 
 /* Main Content */

@@ -58,12 +58,19 @@ body {
   filter: brightness(0) invert(1);
 }
 
-.social-media img {
-  width: 25px;
+.social-media a {
+  transition: transform 0.3s ease, filter 0.3s ease; /* Efectos de hover */
 }
 
-.social-media:hover {
-  filter: brightness(0.5) invert(1);
+.social-media img {
+  width: 25px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.social-media a:hover img {
+  transform: scale(1.2) rotate(15deg); /* Aumenta el tamaño y gira 15 grados */
+  filter: brightness(1.2); /* Aumentar el brillo al hacer hover */
 }
 
 /* Elimina padding/margin por defecto de ul y li */
